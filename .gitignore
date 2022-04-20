@@ -1,0 +1,35 @@
+# Terraform
+.terraform
+*.tfstate
+*.tfstate.backup
+*.md
+# Terragrunt
+.terragrunt-cache
+
+# OS X
+.history
+.DS_Store
+
+# IntelliJ
+.idea_modules
+*.iml
+*.iws
+*.ipr
+.idea/
+build/
+*/build/
+out/
+.*.sw?
+.idea
+terragrunt.iml
+vendor
+.terraform
+.vscode
+*.tfstate
+*.tfstate.backup
+*.out
+.terragrunt-cache
+.bundle
+.ruby-version
+.terraform.lock.hcl
+terragrunt
