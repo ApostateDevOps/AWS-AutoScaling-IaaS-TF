@@ -16,7 +16,7 @@ dependency "aws-data" {
 
 ###########################################################
 # View all available inputs for this module:
-# https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/2.31.0?tab=inputs
+# https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/3.14.0?tab=inputs
 ###########################################################
 inputs = {
   # A list of availability zones names or ids in the region
@@ -33,7 +33,7 @@ inputs = {
 
   # Name to be used on all the resources as identifier
   # type: string
-  name = "novo-nz-Magento-Cloud"
+  name = "Prod-Magento-Cloud"
 
   # A list of private subnets inside the VPC
   # type: list(string)

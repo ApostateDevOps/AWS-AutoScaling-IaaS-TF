@@ -25,7 +25,7 @@ dependency "loadbalancer-internal-securitygroup" {
 inputs = {
   # The resource name and Name tag of the load balancer.
   # type: string
-  name = "novo-nz-WebNodes-ELB"
+  name = "Prod-WebNodes-ELB"
 
   # Controls if the ALB will log requests to S3.
   # type: bool

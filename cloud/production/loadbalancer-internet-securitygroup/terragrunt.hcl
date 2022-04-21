@@ -16,7 +16,7 @@ dependency "magento-cloud" {
 
 ###########################################################
 # View all available inputs for this module:
-# https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws/3.4.0?tab=inputs
+# https://registry.terraform.io/modules/terraform-aws-modules/security-group/aws/4.9.0?tab=inputs
 ###########################################################
 inputs = {
   # List of IPv4 CIDR ranges to use on all ingress rules
@@ -29,7 +29,7 @@ inputs = {
 
   # Name of security group
   # type: string
-  name = "novo-nz-LoadBalancer-Internet-SecurityGroup"
+  name = "Prod-LoadBalancer-Internet-SecurityGroup"
 
   # ID of the VPC where to create security group
   # type: string

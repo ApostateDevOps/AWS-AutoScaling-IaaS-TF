@@ -22,8 +22,8 @@ remote_state {
     encrypt        = true
     region         = "${local.aws_region}"
     key            = format("%s/terraform.tfstate", path_relative_to_include())
-    bucket         = format("tm-tf-states-%s", get_aws_account_id())
-    dynamodb_table = format("tm-tf-locks-%s", get_aws_account_id())
+    bucket         = format("terraform-states-%s", get_aws_account_id())
+    dynamodb_table = format("terraform-locks-%s", get_aws_account_id())
 
     skip_metadata_api_check     = true
     skip_credentials_validation = true
@@ -38,10 +38,11 @@ provider "aws" {
   region = "${local.aws_region}"
 
   # Make it faster by skipping something
-  # skip_get_ec2_platforms      = true
-  # skip_metadata_api_check     = true
-  # skip_region_validation      = true
-  # skip_credentials_validation = true
+  skip_get_ec2_platforms      = true
+  skip_metadata_api_check     = true
+  skip_region_validation      = true
+  skip_credentials_validation = true
+  skip_requesting_account_id  = true
 }
 EOF
 }

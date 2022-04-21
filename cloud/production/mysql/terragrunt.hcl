@@ -20,7 +20,7 @@ dependency "mysql-rds-securitygroup" {
 
 ###########################################################
 # View all available inputs for this module:
-# https://registry.terraform.io/modules/terraform-aws-modules/rds/aws/2.14.0?tab=inputs
+# https://registry.terraform.io/modules/terraform-aws-modules/rds/aws/4.2.0?tab=inputs
 ###########################################################
 inputs = {
   # The allocated storage in gigabytes

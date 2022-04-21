@@ -7,7 +7,7 @@ include {
 }
 
 dependencies {
-  paths = ["../aws-data", "../magento-cloud", "../varnishnode-securitygroup", "../varnish-loadbalanser"]
+  paths = ["../aws-data", "../magento-cloud", "../varnishnode-securitygroup", "../varnish-loadbalancer"]
 }
 
 dependency "aws-data" {
@@ -22,13 +22,13 @@ dependency "varnishnode-securitygroup" {
   config_path = "../varnishnode-securitygroup"
 }
 
-dependency "varnish-loadbalanser" {
-  config_path = "../varnish-loadbalanser"
+dependency "varnish-loadbalancer" {
+  config_path = "../varnish-loadbalancer"
 }
 
 ###########################################################
 # View all available inputs for this module:
-# https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws/3.4.0?tab=inputs
+# https://registry.terraform.io/modules/terraform-aws-modules/autoscaling/aws/6.3.0?tab=inputs
 ###########################################################
 inputs = {
   # The number of Amazon EC2 instances that should be running in the group
@@ -57,7 +57,7 @@ inputs = {
 
   # Creates a unique name beginning with the specified prefix
   # type: string
-  name = "novo-nz-VarnishCacheProxyNode-ASG"
+  name = "Prod-VarnishCacheProxyNode-ASG"
 
   # A list of security group IDs to assign to the launch configuration
   # type: list(string)
@@ -65,7 +65,7 @@ inputs = {
 
   # A list of aws_alb_target_group ARNs, for use with Application Load Balancing
   # type: list(string)
-  target_group_arns = dependency.varnish-loadbalanser.outputs.target_group_arns
+  target_group_arns = dependency.varnish-loadbalancer.outputs.target_group_arns
 
   # A list of subnet IDs to launch resources in
   # type: list(string)
